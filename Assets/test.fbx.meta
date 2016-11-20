@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: f1f40e81ab8d13848b28d2fa587eb019
+timeCreated: 1478882127
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: assiette
+    100002: assiette.001
+    100004: BezierCurve.001
+    100006: BezierCurve.002
+    100008: "caf\xE9"
+    100010: "caf\xE9 fond"
+    100012: Circle.000
+    100014: Circle.002
+    100016: coquetiers
+    100018: coquetiers.001
+    100020: "cuill\xE8re"
+    100022: "cuill\xE8re caf\xE9"
+    100024: "cuill\xE8re.001"
+    100026: eau
+    100028: leaves.003
+    100030: leaves.004
+    100032: leaves.010
+    100034: leaves.012
+    100036: leaves.013
+    100038: leaves.014
+    100040: nappe
+    100042: oeuf
+    100044: oeuf.001
+    100046: petit pain 5
+    100048: petit pain 5.001
+    100050: petit pain 5.002
+    100052: petit pain 5.003
+    100054: plat
+    100056: sucrier
+    100058: sucrier_MeshPart0
+    100060: sucrier_MeshPart1
+    100062: table.000
+    100064: tasse
+    100066: tasse.001
+    100068: //RootNode
+    100070: theiere
+    100072: verre
+    400000: assiette
+    400002: assiette.001
+    400004: BezierCurve.001
+    400006: BezierCurve.002
+    400008: "caf\xE9"
+    400010: "caf\xE9 fond"
+    400012: Circle.000
+    400014: Circle.002
+    400016: coquetiers
+    400018: coquetiers.001
+    400020: "cuill\xE8re"
+    400022: "cuill\xE8re caf\xE9"
+    400024: "cuill\xE8re.001"
+    400026: eau
+    400028: leaves.003
+    400030: leaves.004
+    400032: leaves.010
+    400034: leaves.012
+    400036: leaves.013
+    400038: leaves.014
+    400040: nappe
+    400042: oeuf
+    400044: oeuf.001
+    400046: petit pain 5
+    400048: petit pain 5.001
+    400050: petit pain 5.002
+    400052: petit pain 5.003
+    400054: plat
+    400056: sucrier
+    400058: sucrier_MeshPart0
+    400060: sucrier_MeshPart1
+    400062: table.000
+    400064: tasse
+    400066: tasse.001
+    400068: //RootNode
+    400070: theiere
+    400072: verre
+    2300000: assiette
+    2300002: assiette.001
+    2300004: BezierCurve.001
+    2300006: BezierCurve.002
+    2300008: "caf\xE9"
+    2300010: "caf\xE9 fond"
+    2300012: Circle.000
+    2300014: Circle.002
+    2300016: coquetiers
+    2300018: coquetiers.001
+    2300020: "cuill\xE8re"
+    2300022: "cuill\xE8re caf\xE9"
+    2300024: "cuill\xE8re.001"
+    2300026: eau
+    2300028: leaves.003
+    2300030: leaves.004
+    2300032: leaves.010
+    2300034: leaves.012
+    2300036: leaves.013
+    2300038: leaves.014
+    2300040: nappe
+    2300042: oeuf
+    2300044: oeuf.001
+    2300046: petit pain 5
+    2300048: petit pain 5.001
+    2300050: petit pain 5.002
+    2300052: petit pain 5.003
+    2300054: plat
+    2300056: sucrier_MeshPart0
+    2300058: sucrier_MeshPart1
+    2300060: table.000
+    2300062: tasse
+    2300064: tasse.001
+    2300066: theiere
+    2300068: verre
+    3300000: assiette
+    3300002: assiette.001
+    3300004: BezierCurve.001
+    3300006: BezierCurve.002
+    3300008: "caf\xE9"
+    3300010: "caf\xE9 fond"
+    3300012: Circle.000
+    3300014: Circle.002
+    3300016: coquetiers
+    3300018: coquetiers.001
+    3300020: "cuill\xE8re"
+    3300022: "cuill\xE8re caf\xE9"
+    3300024: "cuill\xE8re.001"
+    3300026: eau
+    3300028: leaves.003
+    3300030: leaves.004
+    3300032: leaves.010
+    3300034: leaves.012
+    3300036: leaves.013
+    3300038: leaves.014
+    3300040: nappe
+    3300042: oeuf
+    3300044: oeuf.001
+    3300046: petit pain 5
+    3300048: petit pain 5.001
+    3300050: petit pain 5.002
+    3300052: petit pain 5.003
+    3300054: plat
+    3300056: sucrier_MeshPart0
+    3300058: sucrier_MeshPart1
+    3300060: table.000
+    3300062: tasse
+    3300064: tasse.001
+    3300066: theiere
+    3300068: verre
+    4300000: Circle.002
+    4300002: BezierCurve.002
+    4300004: leaves.014
+    4300006: leaves.013
+    4300008: leaves.012
+    4300010: leaves.010
+    4300012: petit pain 5.003
+    4300014: petit pain 5.002
+    4300016: petit pain 5.001
+    4300018: oeuf.001
+    4300020: "cuill\xE8re.001"
+    4300022: coquetiers.001
+    4300024: assiette
+    4300026: assiette.001
+    4300028: "caf\xE9"
+    4300030: "caf\xE9 fond"
+    4300032: coquetiers
+    4300034: "cuill\xE8re"
+    4300036: "cuill\xE8re caf\xE9"
+    4300038: eau
+    4300040: oeuf
+    4300042: petit pain 5
+    4300044: plat
+    4300046: sucrier_MeshPart0
+    4300048: sucrier_MeshPart1
+    4300050: tasse
+    4300052: tasse.001
+    4300054: theiere
+    4300056: verre
+    4300058: leaves.003
+    4300060: leaves.004
+    4300062: nappe
+    4300064: table.000
+    4300066: BezierCurve.001
+    4300068: Circle.000
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
