@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 1410b3b68a918824b8f26fa62a827bbb
-timeCreated: 1474987358
+timeCreated: 1479753051
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - barTextureVieFond: {fileID: 2800000, guid: e660ee17383061e4eb8166144d2f97ea, type: 3}
+  - barTextureVie: {fileID: 2800000, guid: 006695b1f18b2264da5572a399340cd0, type: 3}
+  - barTextureVieFinGame: {fileID: 2800000, guid: 827c0c83d6f55c04cb9e7f02d12f1628,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
