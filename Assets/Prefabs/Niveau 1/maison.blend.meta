@@ -68,6 +68,10 @@ ModelImporter:
     100120: Wagon_001
     100122: Wagon_002
     100124: Wagon_003
+    100126: tas_vetements_MeshPart0
+    100128: tas_vetements_MeshPart1
+    100130: tas_vetements_001
+    100132: tas_vetements_002
     400000: Armature
     400002: ballon_nathan
     400004: cadres
@@ -131,6 +135,10 @@ ModelImporter:
     400120: Wagon_001
     400122: Wagon_002
     400124: Wagon_003
+    400126: tas_vetements_MeshPart0
+    400128: tas_vetements_MeshPart1
+    400130: tas_vetements_001
+    400132: tas_vetements_002
     2300000: ballon_nathan
     2300002: cadres
     2300004: cahiers-emma
@@ -188,6 +196,10 @@ ModelImporter:
     2300108: tringles
     2300110: tv
     2300112: ustensiles
+    2300114: tas_vetements_MeshPart0
+    2300116: tas_vetements_MeshPart1
+    2300118: tas_vetements_001
+    2300120: tas_vetements_002
     3300000: ballon_nathan
     3300002: cadres
     3300004: cahiers-emma
@@ -245,6 +257,10 @@ ModelImporter:
     3300108: tringles
     3300110: tv
     3300112: ustensiles
+    3300114: tas_vetements_MeshPart0
+    3300116: tas_vetements_MeshPart1
+    3300118: tas_vetements_001
+    3300120: tas_vetements_002
     4300000: cuisine
     4300002: indice_photo_famille
     4300004: indice_dessin_nathan
@@ -302,6 +318,10 @@ ModelImporter:
     4300108: cadres
     4300110: canape
     4300112: Train
+    4300114: tas_vetements_MeshPart0
+    4300116: tas_vetements_MeshPart1
+    4300118: tas_vetements_002
+    4300120: tas_vetements_001
     7400000: Default Take
     9500000: //RootNode
   materials:
