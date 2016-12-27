@@ -8,6 +8,10 @@ public class Interact : MonoBehaviour {
 	public enum objectT{ door, ammo, clue, other }
 	public objectT TypeDeLObjet;
 	public float AntiSpam = 0.5f;
+	public bool displayGUI = false;
+
+	//Clue
+	public Image clue_imageDansHUD;
 
 	//Dev life <3
 	private float canInteract;
@@ -49,7 +53,12 @@ public class Interact : MonoBehaviour {
 			break;
 				
 			case objectT.clue:
-				print ("C'est un indice!");
+			
+				if (playerInZone && Input.GetButton("Interact")){
+					clue_imageDansHUD.enabled = true;
+					gameObject.SetActive(false);
+				}	
+
 			break;
 
 			case objectT.other:
@@ -63,15 +72,17 @@ public class Interact : MonoBehaviour {
 
 	}
 
-/*	// Too many conflict -> prefab => too many try
+	// Too many conflict -> prefab => too many try
 	void OnGUI(){
-		if (playerInZone) {
-			GameObject.Find ("interactText").GetComponent<Text> ().enabled = true;
-		} else {
-			GameObject.Find ("interactText").GetComponent<Text> ().enabled = false;
+		if (displayGUI) {
+			if (playerInZone) {
+				GameObject.Find ("interactText").GetComponent<Text> ().enabled = true;
+			} else {
+				GameObject.Find ("interactText").GetComponent<Text> ().enabled = false;
+			}
 		}
 	}
-*/
+
 
 	//Activate the Main function when player is near the door
 	void OnTriggerEnter (Collider other){
