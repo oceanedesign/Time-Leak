@@ -11,7 +11,7 @@ public class Interact : MonoBehaviour {
 	public bool displayGUI = false;
 
 	//Clue
-	public Image clue_imageDansHUD;
+	public RawImage clue_imageDansHUD;
 
 	//Dev life <3
 	private float canInteract;
@@ -27,6 +27,9 @@ public class Interact : MonoBehaviour {
 		canInteract = AntiSpam;
 		defaultRot = transform.eulerAngles;
 		openRot = new Vector3 (defaultRot.x, defaultRot.y + DoorOpenAngle, defaultRot.z);
+		if (clue_imageDansHUD) {
+			clue_imageDansHUD.enabled = false;
+		}
 	}
 	
 	// Update is called once per frame
@@ -49,7 +52,12 @@ public class Interact : MonoBehaviour {
 			break;
 
 			case objectT.ammo:
-				print ("Ce sont des munitions! Piou piou piou!!");
+				if (playerInZone && Input.GetButton ("Interact")) {
+					print ("Ce sont des munitions! Piou piou piou!!");
+					gameObject.SetActive (false);
+					/*	Munition
+					GameObject.Find().GetComponent<Text>().get..	*/
+				}
 			break;
 				
 			case objectT.clue:
@@ -72,7 +80,7 @@ public class Interact : MonoBehaviour {
 
 	}
 
-	// Too many conflict -> prefab => too many try
+/*	// Too many conflict -> prefab => too many try
 	void OnGUI(){
 		if (displayGUI) {
 			if (playerInZone) {
@@ -82,7 +90,7 @@ public class Interact : MonoBehaviour {
 			}
 		}
 	}
-
+*/
 
 	//Activate the Main function when player is near the door
 	void OnTriggerEnter (Collider other){
