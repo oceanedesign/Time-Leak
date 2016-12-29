@@ -8,7 +8,7 @@ public class Interact : MonoBehaviour {
 	public enum objectT{ door, ammo, clue, other }
 	public objectT TypeDeLObjet;
 	public float AntiSpam = 0.5f;
-	public bool displayGUI = false;
+	public bool doorOpen, displayGUI = false;
 
 	//Clue
 	public RawImage clue_imageDansHUD;
@@ -16,7 +16,7 @@ public class Interact : MonoBehaviour {
 	//Dev life <3
 	private float canInteract;
 	//	Door
-	private bool playerInZone, doorOpen = false;
+	private bool playerInZone = false;
 	private int smooth = 2;
 	private int DoorOpenAngle = 90;
 	private Vector3 defaultRot;
