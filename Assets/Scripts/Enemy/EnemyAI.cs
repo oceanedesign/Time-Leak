@@ -3,8 +3,9 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour {
 
-	bool modeAttack = false;
-	float attackSpeed = 1f;
+	public bool modeAttack = false;
+	public float attackSpeed = 1f;
+	public float speed = 1f;
 
 	Transform player;
 	NavMeshAgent nav;
@@ -29,6 +30,7 @@ public class EnemyAI : MonoBehaviour {
 
 			//Follow player
 			nav.SetDestination (player.position);
+			nav.speed = speed;
 
 			//Attack
 			if (playerInZone && canAttack < 0) {

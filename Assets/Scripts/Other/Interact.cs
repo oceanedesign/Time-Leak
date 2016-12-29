@@ -80,13 +80,13 @@ public class Interact : MonoBehaviour {
 
 	}
 
-/*	// Too many conflict -> prefab => too many try
+/*
 	void OnGUI(){
 		if (displayGUI) {
 			if (playerInZone) {
-				GameObject.Find ("interactText").GetComponent<Text> ().enabled = true;
+				GameObject.GetComponent<Text> ("interactText").enabled = true;
 			} else {
-				GameObject.Find ("interactText").GetComponent<Text> ().enabled = false;
+				GameObject.GetComponent<Text> ("interactText").enabled = false;
 			}
 		}
 	}
