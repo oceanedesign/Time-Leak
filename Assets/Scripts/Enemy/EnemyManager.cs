@@ -18,13 +18,12 @@ public class EnemyManager : MonoBehaviour {
 	//Trigger activation
 	void OnTriggerEnter (Collider other){
 		if (other.gameObject.tag == "Player") {
-			/*
-			for(enemy in enemyList){
+			foreach (GameObject enemy in enemyList){
+			//for(GameObject  enemy in enemyList){
 
-				enemy.attack = true;
+				enemy.GetComponent<EnemyAI>().modeAttackOn();
 
 			}
-			*/
 		}
 	}
 }
