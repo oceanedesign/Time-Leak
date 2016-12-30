@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: c882f7ff041549249b710479847125a5
+timeCreated: 1483049897
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Grille
+    100004: Grille_MeshPart0
+    100006: Grille_MeshPart1
+    100008: Grille_MeshPart2
+    100010: Pierres
+    100012: Pierres_MeshPart0
+    100014: Pierres_MeshPart1
+    100016: Plane
+    100018: Plane_001
+    100020: PorteN
+    100022: PorteN2
+    100024: PorteN2_001
+    100026: PorteN_001
+    100028: tombes
+    100030: tombes2
+    100032: Tombes3
+    100034: Grille_001
+    100036: Grille_001_MeshPart0
+    100038: Grille_001_MeshPart1
+    100040: Pierres_001
+    100042: Grille_002
+    100044: Grille_003
+    100046: Grille_004
+    400000: //RootNode
+    400002: Grille
+    400004: Grille_MeshPart0
+    400006: Grille_MeshPart1
+    400008: Grille_MeshPart2
+    400010: Pierres
+    400012: Pierres_MeshPart0
+    400014: Pierres_MeshPart1
+    400016: Plane
+    400018: Plane_001
+    400020: PorteN
+    400022: PorteN2
+    400024: PorteN2_001
+    400026: PorteN_001
+    400028: tombes
+    400030: tombes2
+    400032: Tombes3
+    400034: Grille_001
+    400036: Grille_001_MeshPart0
+    400038: Grille_001_MeshPart1
+    400040: Pierres_001
+    400042: Grille_002
+    400044: Grille_003
+    400046: Grille_004
+    2300000: Grille_MeshPart0
+    2300002: Grille_MeshPart1
+    2300004: Grille_MeshPart2
+    2300006: Pierres_MeshPart0
+    2300008: Pierres_MeshPart1
+    2300010: Plane
+    2300012: Plane_001
+    2300014: PorteN
+    2300016: PorteN2
+    2300018: PorteN2_001
+    2300020: PorteN_001
+    2300022: tombes
+    2300024: tombes2
+    2300026: Tombes3
+    2300028: Grille
+    2300030: Grille_001_MeshPart0
+    2300032: Grille_001_MeshPart1
+    2300034: Pierres
+    2300036: Pierres_001
+    2300038: Grille_002
+    2300040: Grille_001
+    2300042: Grille_003
+    2300044: Grille_004
+    3300000: Grille_MeshPart0
+    3300002: Grille_MeshPart1
+    3300004: Grille_MeshPart2
+    3300006: Pierres_MeshPart0
+    3300008: Pierres_MeshPart1
+    3300010: Plane
+    3300012: Plane_001
+    3300014: PorteN
+    3300016: PorteN2
+    3300018: PorteN2_001
+    3300020: PorteN_001
+    3300022: tombes
+    3300024: tombes2
+    3300026: Tombes3
+    3300028: Grille
+    3300030: Grille_001_MeshPart0
+    3300032: Grille_001_MeshPart1
+    3300034: Pierres
+    3300036: Pierres_001
+    3300038: Grille_002
+    3300040: Grille_001
+    3300042: Grille_003
+    3300044: Grille_004
+    4300000: tombes
+    4300002: tombes2
+    4300004: PorteN2_001
+    4300006: PorteN_001
+    4300008: Tombes3
+    4300010: Pierres_MeshPart0
+    4300012: Pierres_MeshPart1
+    4300014: Grille_MeshPart0
+    4300016: Grille_MeshPart1
+    4300018: Grille_MeshPart2
+    4300020: Plane_001
+    4300022: Plane
+    4300024: PorteN
+    4300026: PorteN2
+    4300028: Grille_001_MeshPart0
+    4300030: Grille_001_MeshPart1
+    4300032: Pierres_001
+    4300034: Pierres
+    4300036: Grille
+    4300038: Grille_002
+    4300040: Grille_004
+    4300042: Grille_003
+    4300044: Grille_001
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
