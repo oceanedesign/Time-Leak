@@ -5,7 +5,7 @@ using System.Collections;
 public class Interact : MonoBehaviour {
 
 	//Public
-	public enum objectT{ door, ammo, clue, other }
+	public enum objectT{ door, ammo, clue, nounours, other }
 	public objectT TypeDeLObjet;
 	public float AntiSpam = 0.5f;
 	public bool doorOpen, displayGUI = false;
@@ -52,14 +52,19 @@ public class Interact : MonoBehaviour {
 			break;
 
 			case objectT.ammo:
-				if (playerInZone && Input.GetButton ("Interact")) {
-					print ("Ce sont des munitions! Piou piou piou!!");
+				if (playerInZone && AmmoManager.hasBackpack) {
+					AmmoManager.addAmmo (1);
 					gameObject.SetActive (false);
-					/*	Munition
-					GameObject.Find().GetComponent<Text>().get..	*/
 				}
 			break;
 				
+			case objectT.nounours:
+				if (playerInZone && Input.GetButton ("Interact")) {
+					AmmoManager.hasBackpack = true;
+					gameObject.SetActive (false);
+				}
+				break;
+
 			case objectT.clue:
 			
 				if (playerInZone && Input.GetButton("Interact")){

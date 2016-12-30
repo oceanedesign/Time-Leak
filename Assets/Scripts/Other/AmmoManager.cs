@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class AmmoManager : MonoBehaviour {
 
 	public static int ammo;
+	public static bool hasBackpack;
 	Text text;
 
 
@@ -12,6 +14,10 @@ public class AmmoManager : MonoBehaviour {
 	{
 		text = GetComponent <Text> ();
 		ammo = 5;
+		if (SceneManager.GetActiveScene().name == "niveau1")
+			hasBackpack = false;
+		else
+			hasBackpack = true;
 	}
 
 
