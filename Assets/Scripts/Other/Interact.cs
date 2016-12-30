@@ -5,7 +5,7 @@ using System.Collections;
 public class Interact : MonoBehaviour {
 
 	//Public
-	public enum objectT{ door, ammo, clue, nounours, other }
+	public enum objectT{ door, ammo, clue, nounours, flashlight, other }
 	public objectT TypeDeLObjet;
 	public float AntiSpam = 0.5f;
 	public bool doorOpen, displayGUI = false;
@@ -57,10 +57,17 @@ public class Interact : MonoBehaviour {
 					gameObject.SetActive (false);
 				}
 			break;
-				
+
 			case objectT.nounours:
 				if (playerInZone && Input.GetButton ("Interact")) {
 					AmmoManager.hasBackpack = true;
+					gameObject.SetActive (false);
+				}
+				break;
+
+			case objectT.flashlight:
+				if (playerInZone && Input.GetButton ("Interact")) {
+					PlayerCommand.hasFlashlight = true;
 					gameObject.SetActive (false);
 				}
 				break;
