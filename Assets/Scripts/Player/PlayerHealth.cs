@@ -5,7 +5,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth = 0;
-	public float currentHealth;
+	public static float currentHealth;
 	public Slider healthSlider;
 	public Image fillBar;
 	public float stressAmount = 1f;
@@ -25,5 +25,9 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth += stressAmount*Time.deltaTime;
 		healthSlider.value = currentHealth;
 		fillBar.color = Color.Lerp (beginningColor, gameOverColor, healthSlider.value/ healthSlider.maxValue);
+	}
+
+	public static void takeDmg(int dmg){
+		currentHealth += ((float)dmg / 10);
 	}
 }

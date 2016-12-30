@@ -19,7 +19,7 @@ public class PlayerWeapon : MonoBehaviour {
 		//Lancer de bordel
 		if( Input.GetButtonDown("Fire1") && AmmoManager.ammo > 0){
 			GameObject lego = (GameObject)Instantiate(ammoPrefab[ Random.Range(0, listAmmoSize) ], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-			lego.GetComponent<Rigidbody> ().AddForce (-transform.forward * thrust, ForceMode.Impulse);//(transform.forward * thrust);
+			lego.GetComponent<Rigidbody> ().AddForce (-transform.forward * thrust, ForceMode.Impulse);
 
 			AmmoManager.shot ();
 		}

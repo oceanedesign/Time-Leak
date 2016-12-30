@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour {
 	public bool modeAttack = false;
 	public float attackSpeed = 1f;
 	public float speed = 1f;
+	public int degat = 1;
 
 	Transform player;
 	NavMeshAgent nav;
@@ -35,7 +36,7 @@ public class EnemyAI : MonoBehaviour {
 			//Attack
 			if (playerInZone && canAttack < 0) {
 				canAttack = attackSpeed;
-				print ("Paf, dans ta face!");
+				PlayerHealth.takeDmg (degat);
 			}
 		}
 
