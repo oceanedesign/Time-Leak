@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour {
 	NavMeshAgent nav;
 
 	private float canAttack;
-	private bool playerInZone = false;
+	private bool playerInZone, ammoInZone = false;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +39,10 @@ public class EnemyAI : MonoBehaviour {
 			}
 		}
 
+		if (ammoInZone) {
+			gameObject.GetComponent<EnemyHealth> ().takeDmg ();
+		}
+
 	}
 
 	public void modeAttackOn(){
@@ -47,15 +51,28 @@ public class EnemyAI : MonoBehaviour {
 
 	//Activate the Main function when player is near the door
 	void OnTriggerEnter (Collider other){
-		if (other.gameObject.tag == "Player") {
-			playerInZone = true;
+
+		switch (other.gameObject.tag) {
+			case "Player" :
+				playerInZone = true;
+			break;
+			case "Ammo":
+				ammoInZone = true;
+				Destroy (other.gameObject);
+				break;
 		}
 	}
 
 	//Deactivate the Main function when player is go away from door
 	void OnTriggerExit (Collider other){
-		if (other.gameObject.tag == "Player") {
-			playerInZone = false;
+
+		switch (other.gameObject.tag) {
+			case "Player" :
+				playerInZone = false;
+				break;
+			case "Ammo":
+				ammoInZone = false;
+				break;
 		}
 	}
 }
