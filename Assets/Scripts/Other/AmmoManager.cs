@@ -11,12 +11,20 @@ public class AmmoManager : MonoBehaviour {
 	void Awake ()
 	{
 		text = GetComponent <Text> ();
-		ammo = 0;
+		ammo = 5;
 	}
 
 
 	void Update ()
 	{
 		text.text = ""+ammo;
+	}
+
+	public static void addAmmo(int number){
+		ammo += number;
+	}
+
+	public static void shot(){
+		ammo--;
 	}
 }
