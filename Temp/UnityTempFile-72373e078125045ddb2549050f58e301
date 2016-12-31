@@ -1,10 +1,13 @@
 -debug
 -target:library
 -nowarn:0169
--out:Temp/Assembly-CSharp-Editor-firstpass.dll
+-out:Temp/Assembly-CSharp-Editor.dll
 -r:/opt/Unity/Editor/Data/Managed/UnityEngine.dll
 -r:/opt/Unity/Editor/Data/Managed/UnityEditor.dll
 -r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-CSharp.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript.dll
+-r:Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll
 -r:/opt/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll
 -r:/opt/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll
 -r:/opt/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll
@@ -103,19 +106,6 @@
 -define:UNITY_EDITOR_LINUX
 -define:UNITY_TEAM_LICENSE
 -define:CROSS_PLATFORM_INPUT
-"Assets/Standard Assets/Effects/AmbientOcclusion/Editor/AmbientOcclusionEditor.cs"
-"Assets/Standard Assets/Effects/AntiAliasing/Editor/AntiAliasingEditor.cs"
-"Assets/Standard Assets/Effects/AntiAliasing/Editor/IAntiAliasingEditor.cs"
-"Assets/Standard Assets/Effects/AntiAliasing/FXAA/Editor/FXAAEditor.cs"
-"Assets/Standard Assets/Effects/AntiAliasing/SMAA/Editor/SMAAEditor.cs"
-"Assets/Standard Assets/Effects/Bloom/Editor/BloomEditor.cs"
-"Assets/Standard Assets/Effects/Bloom/Editor/BloomGraphDrawer.cs"
-"Assets/Standard Assets/Effects/Common/Editor/EditorGUIHelper.cs"
-"Assets/Standard Assets/Effects/Common/Editor/FieldFinder.cs"
-"Assets/Standard Assets/Effects/Common/Editor/MinDrawer.cs"
-"Assets/Standard Assets/Effects/DepthOfField/Editor/DepthOfFieldEditor.cs"
-"Assets/Standard Assets/Effects/LensAberrations/Editor/LensAberrationsEditor.cs"
-"Assets/Standard Assets/Effects/ScreenSpaceReflection/Editor/ScreenSpaceReflectionEditor.cs"
-"Assets/Standard Assets/Effects/TonemappingColorGrading/Editor/TonemappingColorGradingEditor.cs"
+Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs
 -r:/opt/Unity/Editor/Data/Mono/lib/mono/2.0/System.Runtime.Serialization.dll
 -r:/opt/Unity/Editor/Data/Mono/lib/mono/2.0/System.Xml.Linq.dll
