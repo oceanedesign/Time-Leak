@@ -13,10 +13,8 @@ public class Interact : MonoBehaviour {
 	//Clue
 	public RawImage clue_imageDansHUD;
 
-	//Dev life <3
 	private float canInteract;
-	//	Door
-	private bool playerInZone = false;
+	private bool playerInZone, inPlayerZone, objectInView = false;
 	private int smooth = 2;
 	private int DoorOpenAngle = 90;
 	private Vector3 defaultRot;
@@ -31,9 +29,15 @@ public class Interact : MonoBehaviour {
 			clue_imageDansHUD.enabled = false;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+
+		if ( PlayerObjectInteract.isObjectInPlayerInteractiveZone( gameObject.GetComponent<Collider>() ) ){
+			objectInView = true;
+		} else {
+			objectInView = false;
+		}
 
 		canInteract -= Time.deltaTime;
 
@@ -45,7 +49,7 @@ public class Interact : MonoBehaviour {
 					transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, openRot, Time.deltaTime * smooth);
 				}
 
-				if( playerInZone && Input.GetButton("Interact") && canInteract < 0 ){
+				if( playerInZone && Input.GetButton("Interact") && canInteract < 0 && objectInView){
 					canInteract = AntiSpam;
 					doorOpen = !doorOpen;
 				}
@@ -59,14 +63,14 @@ public class Interact : MonoBehaviour {
 			break;
 
 			case objectT.nounours:
-				if (playerInZone && Input.GetButton ("Interact")) {
+				if (playerInZone && Input.GetButton ("Interact") && objectInView) {
 					AmmoManager.hasBackpack = true;
 					gameObject.SetActive (false);
 				}
 				break;
 
 			case objectT.flashlight:
-				if (playerInZone && Input.GetButton ("Interact")) {
+				if (playerInZone && Input.GetButton ("Interact") && objectInView) {
 					PlayerCommand.hasFlashlight = true;
 					gameObject.SetActive (false);
 				}
@@ -74,7 +78,7 @@ public class Interact : MonoBehaviour {
 
 			case objectT.clue:
 			
-				if (playerInZone && Input.GetButton("Interact")){
+			if (playerInZone && Input.GetButton("Interact") && objectInView){
 					clue_imageDansHUD.enabled = true;
 					gameObject.SetActive(false);
 				}	

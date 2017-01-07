@@ -19,11 +19,11 @@ public class EnemyManager : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 		if (other.gameObject.tag == "Player") {
 			foreach (GameObject enemy in enemyList){
-			//for(GameObject  enemy in enemyList){
-
 				enemy.GetComponent<EnemyAI>().modeAttackOn();
-
+				PlayerHealth.stressMode = true;
 			}
+			//Destroy enemy manager
+			Destroy (gameObject);
 		}
 	}
 }
