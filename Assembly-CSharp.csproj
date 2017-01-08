@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerCommand.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerWeapon.cs" />
+     <Compile Include="Assets\Scripts\Trigger\EndGame.cs" />
      <Compile Include="Assets\Scripts\mainMenu\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\mainMenu\QuitOnClick.cs" />
      <Compile Include="Assets\Scripts\mainMenu\SelectOnInput.cs" />
