@@ -5,6 +5,7 @@ public class PlayerWeapon : MonoBehaviour {
 
 	public GameObject[] ammoPrefab;
 	public float thrust = 10f;
+	public GameObject canvasPause; 
 
 	int listAmmoSize;
 
@@ -17,7 +18,7 @@ public class PlayerWeapon : MonoBehaviour {
 	void Update () {
 
 		//Lancer de bordel
-		if( Input.GetButtonDown("Fire1") && AmmoManager.ammo > 0){
+		if( Input.GetButtonDown("Fire1") && AmmoManager.ammo > 0 && canvasPause.activeSelf==false){
 			GameObject lego = (GameObject)Instantiate(ammoPrefab[ Random.Range(0, listAmmoSize) ], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
 			lego.GetComponent<Rigidbody> ().AddForce (-transform.forward * thrust, ForceMode.Impulse);
 
