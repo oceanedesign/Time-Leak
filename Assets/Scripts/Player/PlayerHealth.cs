@@ -34,6 +34,11 @@ public class PlayerHealth : MonoBehaviour {
 			stressMode = false;
 		else
 			stressMode = true;
+
+		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "niveau3")
+			stressMode = false;
+		else
+			stressMode = true;
 	}
 
 	// Update is called once per frame
