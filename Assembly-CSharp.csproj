@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Other\AmmoManager.cs" />
      <Compile Include="Assets\Scripts\Other\Destructor.cs" />
      <Compile Include="Assets\Scripts\Other\GameOverManager.cs" />
+     <Compile Include="Assets\Scripts\Other\GlowOnFlashLight.cs" />
      <Compile Include="Assets\Scripts\Other\Interact.cs" />
      <Compile Include="Assets\Scripts\PauseGame.cs" />
      <Compile Include="Assets\Scripts\PlayCinematic.cs" />

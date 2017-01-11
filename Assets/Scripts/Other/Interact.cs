@@ -58,7 +58,7 @@ public class Interact : MonoBehaviour {
 			case objectT.ammo:
 				if (playerInZone && AmmoManager.hasBackpack) {
 					AmmoManager.addAmmo (1);
-					gameObject.SetActive (false);
+					gameObject.SetActive (false);	
 				}
 			break;
 
