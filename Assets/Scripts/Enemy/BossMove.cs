@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BossMove : MonoBehaviour {
 
 	public Transform player;
 	static Animator anim; 
+	public Slider healthbar;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -12,6 +15,10 @@ public class BossMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (healthbar.value <= 0)
+			return;
+
 		Vector3 direction = player.position - this.transform.position;
 		//float angle = Vector3.Angle (direction, this.transform.forward);
 		if (Vector3.Distance (player.position, this.transform.position) < 15 ) {

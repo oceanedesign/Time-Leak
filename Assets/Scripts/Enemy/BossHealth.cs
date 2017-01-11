@@ -8,6 +8,8 @@ public class BossHealth : MonoBehaviour {
 	Animator anim;
 
 	void OnTriggerEnter(Collider other){
+		if (other.gameObject.tag != "Ammo")
+			return;
 		Debug.Log ("Ca fait mal!");
 		healthbar.value -= 20;
 		if (healthbar.value <= 0) {
