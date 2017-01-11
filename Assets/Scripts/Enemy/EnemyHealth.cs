@@ -16,10 +16,6 @@ public class EnemyHealth : MonoBehaviour {
 				break;
 
 			case levelEnemy.level2 :
-				health = 2;
-				break;
-
-			case levelEnemy.level3 :
 				health = 3;
 				break;
 
@@ -39,6 +35,6 @@ public class EnemyHealth : MonoBehaviour {
 	}
 
 	public void takeDmg(){
-		health -= 1;
+		health --;
 	}
 }

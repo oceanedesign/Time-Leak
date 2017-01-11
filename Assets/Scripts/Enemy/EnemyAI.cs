@@ -41,6 +41,7 @@ public class EnemyAI : MonoBehaviour {
 		}
 
 		if (ammoInZone) {
+			ammoInZone = false;
 			gameObject.GetComponent<EnemyHealth> ().takeDmg ();
 		}
 
@@ -60,7 +61,7 @@ public class EnemyAI : MonoBehaviour {
 			case "Ammo":
 				ammoInZone = true;
 				Destroy (other.gameObject);
-				break;
+			break;
 		}
 	}
 
