@@ -27,13 +27,6 @@ public class GameOverManager : MonoBehaviour
 			Screen.lockCursor = false;
 			// ... tell the animator the game is over.
 	//		anim.SetTrigger ("GameOver");
-/*
-			// .. if it reaches the restart delay...
-			if(restartTimer >= restartDelay)
-			{
-				// .. then reload the currently loaded level.
-				UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
-			}	*/
 		}
 	}
 }

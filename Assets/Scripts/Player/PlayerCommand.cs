@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerCommand : MonoBehaviour {
 
-	GameObject torche;
+	static GameObject torche;
 
 	public static bool hasFlashlight;
 	float canEnableFlashlight, AntiSpam = 0.25f;
@@ -34,5 +34,9 @@ public class PlayerCommand : MonoBehaviour {
 				torche.SetActive (true);
 		}
 
+	}
+
+	public static bool torchIsActive(){
+		return torche.activeSelf;
 	}
 }
