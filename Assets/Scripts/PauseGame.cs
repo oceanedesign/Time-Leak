@@ -22,13 +22,16 @@ public class PauseGame : MonoBehaviour {
 			canvas.gameObject.SetActive(true);
 			Time.timeScale = 0;
 			Player.GetComponent<FirstPersonController>().enabled = false;
-			Screen.lockCursor = false;
-		} else 
-		{
+
+			Cursor.lockState = CursorLockMode.Confined;
+			Cursor.visible = true;
+		} else {
 			canvas.gameObject.SetActive(false);
 			Time.timeScale = 1;
 			Player.GetComponent<FirstPersonController>().enabled = true;
-			Screen.lockCursor = true;
+
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 		}		
 	}
 }

@@ -8,9 +8,12 @@ public class BossMove : MonoBehaviour {
 	static Animator anim; 
 	public Slider healthbar;
 
+	double animationTime;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		animationTime = 3;
 	}
 	
 	// Update is called once per frame
@@ -19,17 +22,29 @@ public class BossMove : MonoBehaviour {
 		if (healthbar.value <= 0)
 			return;
 
+		if (anim.GetBool ("isAttacking")) {
+			animationTime -= Time.deltaTime;
+			if (animationTime < 0) {
+				animationTime = 3;	
+				anim.SetBool ("isIdle", true);
+				anim.SetBool ("isWalking", false);
+				anim.SetBool ("isAttacking", false);
+			}
+			return;
+		}
+		
 		Vector3 direction = player.position - this.transform.position;
 		//float angle = Vector3.Angle (direction, this.transform.forward);
-		if (Vector3.Distance (player.position, this.transform.position) < 15 ) {
+		if (Vector3.Distance (player.position, this.transform.position) < 15 && (anim.GetBool("isIdle") || anim.GetBool("isWalking")) ) {
 
 			direction.y = 0;
 
-			this.transform.rotation = Quaternion.Slerp (this.transform.rotation, Quaternion.LookRotation (direction), 0.1f);
+			transform.LookAt(player);	// Sauf si tu trouves trop brutal
+//			this.transform.rotation = Quaternion.Slerp (this.transform.rotation, Quaternion.LookRotation (direction), Time.time * 0.1f );
 
 			anim.SetBool ("isIdle", false);
 			if (direction.magnitude > 8) {
-				this.transform.Translate (0, 0, 0.5f);
+				this.transform.Translate (0, 0, 0.2f);
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
 			} else {
@@ -42,7 +57,7 @@ public class BossMove : MonoBehaviour {
 		{
 			anim.SetBool ("isIdle", true);
 			anim.SetBool ("isWalking", false);
-			anim.SetBool ("isAttacking", false);				
+			anim.SetBool ("isAttacking", false);	
 		}
 	
 	}
