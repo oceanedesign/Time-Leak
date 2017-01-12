@@ -30,15 +30,10 @@ public class PlayerHealth : MonoBehaviour {
 		damageImage = GameObject.Find ("damageImage").GetComponent<Image> ();
 		player_isDead = false;
 
-		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "niveau1")
-			stressMode = false;
-		else
+		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "niveau2")
 			stressMode = true;
-
-		if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "niveau3")
-			stressMode = false;
 		else
-			stressMode = true;
+			stressMode = false;
 	}
 
 	// Update is called once per frame

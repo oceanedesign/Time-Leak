@@ -5,7 +5,7 @@ using System.Collections;
 
 public class AmmoManager : MonoBehaviour {
 
-	public static int ammo;
+	public static int ammo = 0;
 	public static bool hasBackpack;
 	Text text;
 
@@ -13,7 +13,6 @@ public class AmmoManager : MonoBehaviour {
 	void Awake ()
 	{
 		text = GetComponent <Text> ();
-		ammo = 5;
 		if (SceneManager.GetActiveScene().name == "niveau1")
 			hasBackpack = false;
 		else
