@@ -65,14 +65,14 @@ public class Interact : MonoBehaviour {
 			case objectT.nounours:
 				if (playerInZone && Input.GetButton ("Interact") && objectInView) {
 					AmmoManager.hasBackpack = true;
-					gameObject.SetActive (false);
+					Destroy(gameObject);
 				}
 				break;
 
 			case objectT.flashlight:
 				if (playerInZone && Input.GetButton ("Interact") && objectInView) {
 					PlayerCommand.hasFlashlight = true;
-					gameObject.SetActive (false);
+					Destroy(gameObject);
 				}
 				break;
 
@@ -80,7 +80,7 @@ public class Interact : MonoBehaviour {
 			
 			if (playerInZone && Input.GetButton("Interact") && objectInView){
 					clue_imageDansHUD.enabled = true;
-					gameObject.SetActive(false);
+					Destroy(gameObject);
 				}	
 
 			break;

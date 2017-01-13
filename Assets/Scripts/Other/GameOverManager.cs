@@ -24,7 +24,7 @@ public class GameOverManager : MonoBehaviour
 			//Display GO Screen
 			gameOverScreen.SetActive(true);
 
-			Cursor.lockState = CursorLockMode.Confined;
+			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
 			// ... tell the animator the game is over.
 	//		anim.SetTrigger ("GameOver");

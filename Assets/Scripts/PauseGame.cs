@@ -23,7 +23,7 @@ public class PauseGame : MonoBehaviour {
 			Time.timeScale = 0;
 			Player.GetComponent<FirstPersonController>().enabled = false;
 
-			Cursor.lockState = CursorLockMode.Confined;
+			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
 		} else {
 			canvas.gameObject.SetActive(false);
