@@ -17,7 +17,7 @@ public class EndGame : MonoBehaviour {
 	{
 		if (col.gameObject == player)
 		{
-			SceneManager.LoadScene ((SceneManager.GetActiveScene().buildIndex)+1); // utiliser le nom de la scéne de fin de jeu en mode victoire.
+			SceneManager.LoadScene ((SceneManager.GetActiveScene().buildIndex)+1); // utiliser le nom de la scene de fin de jeu en mode victoire.
 		}
 
 	}
