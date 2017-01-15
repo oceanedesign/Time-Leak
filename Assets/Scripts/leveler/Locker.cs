@@ -8,6 +8,8 @@ public class Locker : MonoBehaviour {
 	public List<GameObject> objectForUnlock;
 	public float timeLockedText = 1f;
 	public string messageToDisplay = "Il me reste des choses à faire ici...";
+	public enum scriptName{ Interact, EndGame }
+	public scriptName scriptN;
 
 	bool playerInZone, objectInView, textVisible = false;
 	float timeTextVisible;
@@ -15,7 +17,15 @@ public class Locker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<Interact> ().enabled = false;
+		switch (scriptN) {
+			case scriptName.Interact:
+				GetComponent<Interact> ().enabled = false;
+				break;
+
+			case scriptName.EndGame:
+				GetComponent<EndGame> ().enabled = false;
+				break;
+		}
 		timeTextVisible = timeLockedText;
 //		GameObject.Find ("lockedText").GetComponent<Text> ().enabled = false;
 		timeTextVisible = -1;
@@ -24,7 +34,15 @@ public class Locker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (objectForUnlock.Count == 0) {
-			GetComponent<Interact> ().enabled = true;
+			switch (scriptN) {
+				case scriptName.Interact:
+					GetComponent<Interact> ().enabled = true;
+					break;
+
+				case scriptName.EndGame:
+					GetComponent<EndGame> ().enabled = true;
+					break;
+			}
 			Destroy (this);
 		}
 
@@ -59,7 +77,6 @@ public class Locker : MonoBehaviour {
 				textVisible = false;
 			} else {
 				timeTextVisible -= Time.deltaTime;
-				print (timeTextVisible);
 			}
 		}
 	}

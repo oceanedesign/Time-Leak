@@ -15,7 +15,7 @@ public class EndGame : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.gameObject == player)
+		if (col.gameObject == player && !gameObject.GetComponent<Locker> ())
 		{
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
