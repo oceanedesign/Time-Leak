@@ -82,7 +82,7 @@ public class Interact : MonoBehaviour {
 					clue_imageDansHUD.enabled = true;
 					Destroy(gameObject);
 
-					PlayerHealth.takeHeal();
+					PlayerHealth.takeHeal(2);
 				}	
 
 			break;

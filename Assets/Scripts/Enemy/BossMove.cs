@@ -13,7 +13,7 @@ public class BossMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-		animationTime = 3;
+		animationTime = 3.367;
 	}
 	
 	// Update is called once per frame
