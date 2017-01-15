@@ -17,7 +17,7 @@ public class Locker : MonoBehaviour {
 	void Start () {
 		GetComponent<Interact> ().enabled = false;
 		timeTextVisible = timeLockedText;
-		GameObject.Find ("lockedText").GetComponent<Text> ().enabled = false;
+//		GameObject.Find ("lockedText").GetComponent<Text> ().enabled = false;
 		timeTextVisible = -1;
 	}
 	
@@ -43,7 +43,7 @@ public class Locker : MonoBehaviour {
 			GameObject.Find ("lockedText").GetComponent<Text> ().text = messageToDisplay;
 
 			// Affiche le message
-			GameObject.Find ("lockedText").GetComponent<Text> ().enabled = true;
+//			GameObject.Find ("lockedText").GetComponent<Text> ().enabled = true;
 
 			//Timer
 			textVisible = true;
@@ -53,7 +53,7 @@ public class Locker : MonoBehaviour {
 		//	Timer
 		if (textVisible) {
 			if (timeTextVisible < 0) {
-				GameObject.Find ("lockedText").GetComponent<Text> ().enabled = false;
+//				GameObject.Find ("lockedText").GetComponent<Text> ().enabled = false;
 				GameObject.Find ("lockedText").GetComponent<Text> ().text = tmpString;
 
 				textVisible = false;

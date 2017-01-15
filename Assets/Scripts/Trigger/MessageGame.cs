@@ -4,20 +4,14 @@ using UnityEngine.UI;
 
 public class MessageGame : MonoBehaviour {
 
-	private GameObject player;
-	public Text loadingText;
+	public string message;
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");	
+		
 	}
-	
-	// Update is called once per frame
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject == player)
-		{
-			loadingText.text = "Il y a un mot sur le lit d'Emma... ";
-		}
+		
+	void OnDestroy(){
+		GameObject.Find ("lockedText").GetComponent<Text> ().text = message;
 	}
 }
