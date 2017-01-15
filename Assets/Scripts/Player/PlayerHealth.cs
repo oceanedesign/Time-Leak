@@ -15,11 +15,12 @@ public class PlayerHealth : MonoBehaviour {
 	public Color gameOverColor;
 
 	public static float currentHealth;
-	public static bool player_damaged, player_isDead = false;
+	public static bool player_damaged, player_heal, player_isDead = false;
 	public static bool stressMode;
 
 	float flashSpeed = 5f;
-	Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	Color flashColourDmg = new Color(1f, 0f, 0f, 0.1f);
+	Color flashColourHeal = new Color(0f, 0f, 1f, 0.1f);
 	Image damageImage;
 
 	void Awake () {
@@ -38,23 +39,33 @@ public class PlayerHealth : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//Debug
+		if (currentHealth < healthSlider.minValue) {
+			currentHealth = healthSlider.minValue;
+		}
+
 		if (stressMode) {
 			// Remplie la barre de stress
 			currentHealth += stressAmount*Time.deltaTime;
 			healthSlider.value = currentHealth;
 			fillBar.color = Color.Lerp (beginningColor, gameOverColor, healthSlider.value/ healthSlider.maxValue);
+		}
 
-			//HUD dmg
-			if(player_damaged)
-			{
-				damageImage.color = flashColour;
-			}
-			else
-			{
+
+		//HUD dmg/heal
+		if(player_damaged)
+		{
+			damageImage.color = flashColourDmg;
+		}
+		else
+		{
+			if (player_heal) {
+				damageImage.color = flashColourHeal;
+			} else {
 				damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 			}
-			player_damaged = false;
 		}
+		player_damaged = player_heal = false;
 
 		//Die
 		if (healthSlider.value == healthSlider.maxValue && !player_isDead)
@@ -64,6 +75,11 @@ public class PlayerHealth : MonoBehaviour {
 	public static void takeDmg(int dmg){
 		currentHealth += ((float)dmg / 10);
 		player_damaged = true;
+	}
+
+	public static void takeHeal(){
+		currentHealth -= ((float)2 / 10);
+		player_heal = true;
 	}
 
 	void Death ()

@@ -78,9 +78,11 @@ public class Interact : MonoBehaviour {
 
 			case objectT.clue:
 			
-			if (playerInZone && Input.GetButton("Interact") && objectInView){
+				if (playerInZone && Input.GetButton("Interact") && objectInView){
 					clue_imageDansHUD.enabled = true;
 					Destroy(gameObject);
+
+					PlayerHealth.takeHeal();
 				}	
 
 			break;
