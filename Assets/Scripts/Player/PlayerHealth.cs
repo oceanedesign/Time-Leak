@@ -77,8 +77,8 @@ public class PlayerHealth : MonoBehaviour {
 		player_damaged = true;
 	}
 
-	public static void takeHeal(){
-		currentHealth -= ((float)2 / 10);
+	public static void takeHeal(int heal){
+		currentHealth -= ((float)heal / 10);
 		player_heal = true;
 	}
 
