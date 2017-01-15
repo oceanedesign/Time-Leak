@@ -10,6 +10,8 @@ public class Interact : MonoBehaviour {
 	public float AntiSpam = 0.5f;
 	public bool doorOpen, displayGUI = false;
 
+	bool isInteractObject = false;
+
 	//Clue
 	public RawImage clue_imageDansHUD;
 
@@ -52,6 +54,7 @@ public class Interact : MonoBehaviour {
 				if( playerInZone && Input.GetButton("Interact") && canInteract < 0 && objectInView){
 					canInteract = AntiSpam;
 					doorOpen = !doorOpen;
+				isInteractObject = true;
 				}
 			break;
 
@@ -109,6 +112,10 @@ public class Interact : MonoBehaviour {
 		}
 	}
 */
+
+	public bool isInteract(){
+		return isInteractObject;
+	}
 
 	//Activate the Main function when player is near the door
 	void OnTriggerEnter (Collider other){
