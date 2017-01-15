@@ -7,6 +7,10 @@ public class EnemyHealth : MonoBehaviour {
 	public levelEnemy healthEnemy;
 
 	int health;
+	bool animTakeDmg = false;
+	Behaviour halo;
+	const float dmgHaloTimeConst = 0.1f;
+	float dmgHaloTime;	
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +27,7 @@ public class EnemyHealth : MonoBehaviour {
 				health = 5;
 				break;
 		}
+		halo = (Behaviour)GetComponent ("Halo");
 	}
 	
 	// Update is called once per frame
@@ -31,10 +36,22 @@ public class EnemyHealth : MonoBehaviour {
 		// Die
 		if (health <= 0)
 			Destroy (gameObject);
+
+		if(dmgHaloTime < 0)
+			halo.enabled = false;
+
+		dmgHaloTime -= Time.deltaTime;
+		if (animTakeDmg) {
+			halo.enabled = true;
+			animTakeDmg = false;
+			dmgHaloTime = dmgHaloTimeConst;
+		}
 		
 	}
 
 	public void takeDmg(){
 		health --;
+		animTakeDmg = true;
+
 	}
 }
