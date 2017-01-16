@@ -8,11 +8,16 @@ public class BossMove : MonoBehaviour {
 	static Animator anim; 
 	public Slider healthbar;
 
-	double animationTime;
+	float animationTime = 0f;
+	Vector3 dmgPositionFlamethrower = new Vector3(0, 100, 0);
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+
+		//Disable Flamethrower
+		gameObject.transform.FindChild ("Flamethrower").FindChild("FlamethrowerParticle").gameObject.SetActive (false);
+		gameObject.transform.FindChild ("Flamethrower").FindChild ("FlamethrowerBox").transform.position = dmgPositionFlamethrower;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +28,7 @@ public class BossMove : MonoBehaviour {
 
 		if (anim.GetBool ("isAttacking")) {
 			animationTime += Time.deltaTime;
-			if (animationTime > 3.367) {
+			if (animationTime >= 3.367) {
 				//Reset
 				animationTime = 0;
 				//Animation Controller
@@ -31,16 +36,16 @@ public class BossMove : MonoBehaviour {
 				anim.SetBool ("isWalking", false);
 				anim.SetBool ("isAttacking", false);
 				//Disable Flamethrower
-		//		gameObject.transform.FindChild ("Flamethrower").gameObject.SetActive (false);
-				gameObject.transform.FindChild ("Flamethrower").gameObject.GetComponent<Collider> ().gameObject.SetActive (false); //.enabled = false;
+				gameObject.transform.FindChild ("Flamethrower").FindChild("FlamethrowerParticle").gameObject.SetActive (false);
+				gameObject.transform.FindChild ("Flamethrower").FindChild ("FlamethrowerBox").transform.position = dmgPositionFlamethrower;
 				return;
 			}
 			if (animationTime > 2) {
 				//Enable Flamethrower Collider
-				gameObject.transform.FindChild ("Flamethrower").gameObject.GetComponent<Collider> ().gameObject.SetActive (true); //.enabled = true;
+				gameObject.transform.FindChild ("Flamethrower").FindChild ("FlamethrowerBox").transform.position = gameObject.transform.FindChild ("Flamethrower").transform.position;
 			}
-			//Enable Flamethrower
-	//		gameObject.transform.FindChild ("Flamethrower").gameObject.SetActive (true);
+			//Enable Flamethrower Animation
+			gameObject.transform.FindChild ("Flamethrower").FindChild("FlamethrowerParticle").gameObject.SetActive (true);
 			return;
 		}
 		
