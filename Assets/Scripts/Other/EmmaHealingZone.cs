@@ -15,15 +15,16 @@ public class EmmaHealingZone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+		// Si le player est dans la zone d'influence (boxCollider Trigger)
 		if (playerInZone) {
-			if (deltaTimeHeal < 0) {
-				PlayerHealth.takeHeal (1);
-				deltaTimeHeal = deltaTimeHealConst;
+			if (deltaTimeHeal < 0) {	// Delais de temps entre chaque soin
+				deltaTimeHeal = deltaTimeHealConst;	// Remet la valeur tampon
+				PlayerHealth.takeHeal (1);	// Appel de la fonction "takeHeal" du script "PlayerHeath"
 			}
 		}
 
-		deltaTimeHeal -= Time.deltaTime;
+		deltaTimeHeal -= Time.deltaTime;	// Timer avant le prochain soin
 	}
 
 	//Activate the Main function when player is near the door

@@ -12,7 +12,6 @@ public class GameOverManager : MonoBehaviour
 	void Awake ()
 	{
 		// Set up the reference.
-//		anim = GetComponent <Animator> ();
 		gameOverScreen.SetActive(false);
 	}
 
@@ -25,10 +24,9 @@ public class GameOverManager : MonoBehaviour
 			//Display GO Screen
 			gameOverScreen.SetActive(true);
 
+			// Libere le curseur
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
-			// ... tell the animator the game is over.
-	//		anim.SetTrigger ("GameOver");
 		}
 	}
 }
