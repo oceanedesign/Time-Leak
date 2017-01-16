@@ -6,6 +6,7 @@ public class MessageGame : MonoBehaviour {
 
 	public string message; 
 	public bool messageOnInteract = false;
+	public bool messageOnActive = false;
 	Interact interactInstance;
 
 	// Use this for initialization 
@@ -18,6 +19,13 @@ public class MessageGame : MonoBehaviour {
 	void Update(){
 		if (messageOnInteract) {
 			if ( interactInstance.isInteract() ) {
+				GameObject.Find ("lockedText").GetComponent<Text> ().text = message; 
+				Destroy (this);
+			}
+		}
+
+		if (messageOnActive) {
+			if (gameObject.activeSelf) {
 				GameObject.Find ("lockedText").GetComponent<Text> ().text = message; 
 				Destroy (this);
 			}
