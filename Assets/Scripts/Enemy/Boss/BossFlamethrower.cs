@@ -17,12 +17,12 @@ public class BossFlamethrower : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		canAttack -= Time.deltaTime;
+		canAttack -= Time.deltaTime;	// Decremente le temps avant la prochaine attaque subit par le player
 
 		//Attack
 		if (playerInZone && canAttack < 0) {
-			canAttack = attackSpeed;
-			PlayerHealth.takeDmg (degat);
+			canAttack = attackSpeed;	// Reset le temps entre chaque attaque
+			PlayerHealth.takeDmg (degat);	// le player subit des degats via la fonction "takeDmg" du script "PlayerHealth"
 		}
 
 	}
