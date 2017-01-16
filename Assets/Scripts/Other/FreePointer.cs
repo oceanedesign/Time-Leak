@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ *
+ *	Script pour liberer ou bloquer le curseur dans une scene
+ *
+ **/
+
 public class FreePointer : MonoBehaviour {
 
 	public bool pointeurLibre = true;
@@ -13,10 +19,10 @@ public class FreePointer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (pointeurLibre) {
+		if (pointeurLibre) {	// Libere le curseur
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
-		} else {
+		} else {	// Bloque le curseur
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 		}

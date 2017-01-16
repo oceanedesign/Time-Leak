@@ -17,12 +17,14 @@ public class EnemyManager : MonoBehaviour {
 
 	//Trigger activation
 	void OnTriggerEnter (Collider other){
-		if (other.gameObject.tag == "Player") {
-			foreach (GameObject enemy in enemyList){
-				enemy.GetComponent<EnemyAI>().modeAttackOn();
-				PlayerHealth.stressMode = true;
+		if (other.gameObject.tag == "Player") {	// Si le joueur passe dans le Collider
+			
+			foreach (GameObject enemy in enemyList){	// Pour chaque ennemie dans la liste
+				enemy.GetComponent<EnemyAI>().modeAttackOn();	// Active l'ennemie
+				PlayerHealth.stressMode = true;	// Active la barre de stress (redondant si deja active)
 			}
-			//Destroy enemy manager
+
+			//Destroy enemy manager (GO)
 			Destroy (gameObject);
 		}
 	}

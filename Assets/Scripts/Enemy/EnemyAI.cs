@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Place des GO/Compo dans des variables
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
 		nav = GetComponent <NavMeshAgent> ();
 
@@ -25,9 +26,9 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (modeAttack) {
+		if (modeAttack) {	// Si l'ennemie attaque le player
 
-			canAttack -= Time.deltaTime;
+			canAttack -= Time.deltaTime;	// Decremente le timer
 
 			//Follow player
 			nav.SetDestination (player.position);
@@ -36,17 +37,19 @@ public class EnemyAI : MonoBehaviour {
 			//Attack
 			if (playerInZone && canAttack < 0) {
 				canAttack = attackSpeed;
-				PlayerHealth.takeDmg (degat);
+				PlayerHealth.takeDmg (degat);	// le player subit des degats via la fonction "takeDmg" du script "PlayerHealth"
 			}
 		}
 
-		if (ammoInZone) {
-			ammoInZone = false;
-			gameObject.GetComponent<EnemyHealth> ().takeDmg ();
-		}
+		if (ammoInZone) {	// Si une munition touche l'ennemie
+			ammoInZone = false;	// Desactive la variable
+			// L'ennemie subit des degats via la fonction "takeDmg" du script "EnemyHealth" attache au GO
+			gameObject.GetComponent<EnemyHealth> ().takeDmg ();	
+		}	
 
 	}
 
+	// Fonction publique pour "activer" l'ennemie
 	public void modeAttackOn(){
 		modeAttack = true;
 	}
@@ -55,10 +58,10 @@ public class EnemyAI : MonoBehaviour {
 	void OnTriggerEnter (Collider other){
 
 		switch (other.gameObject.tag) {
-			case "Player" :
+			case "Player" :	// Si c'est le player
 				playerInZone = true;
 			break;
-			case "Ammo":
+			case "Ammo":	// Si c'est un projectile lancé par le player
 				ammoInZone = true;
 				Destroy (other.gameObject);
 			break;
