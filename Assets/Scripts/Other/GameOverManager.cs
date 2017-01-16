@@ -5,6 +5,7 @@ public class GameOverManager : MonoBehaviour
 {
 	public float restartDelay = 5f;         // Time to wait before restarting the level
 	public GameObject gameOverScreen;
+	public AudioSource source;
 
 	Animator anim;                          // Reference to the animator component.
 
@@ -20,7 +21,7 @@ public class GameOverManager : MonoBehaviour
 	{
 		// If the player has run out of health...
 		if(PlayerHealth.player_isDead){
-
+			source.mute = true;
 			//Display GO Screen
 			gameOverScreen.SetActive(true);
 
