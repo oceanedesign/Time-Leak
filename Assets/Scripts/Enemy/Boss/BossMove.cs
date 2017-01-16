@@ -13,7 +13,6 @@ public class BossMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-		animationTime = 3.367;
 	}
 	
 	// Update is called once per frame
@@ -23,13 +22,25 @@ public class BossMove : MonoBehaviour {
 			return;
 
 		if (anim.GetBool ("isAttacking")) {
-			animationTime -= Time.deltaTime;
-			if (animationTime < 0) {
-				animationTime = 3;	
+			animationTime += Time.deltaTime;
+			if (animationTime > 3.367) {
+				//Reset
+				animationTime = 0;
+				//Animation Controller
 				anim.SetBool ("isIdle", true);
 				anim.SetBool ("isWalking", false);
 				anim.SetBool ("isAttacking", false);
+				//Disable Flamethrower
+		//		gameObject.transform.FindChild ("Flamethrower").gameObject.SetActive (false);
+				gameObject.transform.FindChild ("Flamethrower").gameObject.GetComponent<Collider> ().gameObject.SetActive (false); //.enabled = false;
+				return;
 			}
+			if (animationTime > 2) {
+				//Enable Flamethrower Collider
+				gameObject.transform.FindChild ("Flamethrower").gameObject.GetComponent<Collider> ().gameObject.SetActive (true); //.enabled = true;
+			}
+			//Enable Flamethrower
+	//		gameObject.transform.FindChild ("Flamethrower").gameObject.SetActive (true);
 			return;
 		}
 		
