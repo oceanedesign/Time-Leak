@@ -5,13 +5,14 @@ using System.Collections;
 public class BossHealth : MonoBehaviour {
 
 	public Slider healthbar;
+	public int nbrToucheAvantMort = 5;
 	Animator anim;
 
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag != "Ammo")
 			return;
-		Debug.Log ("Ca fait mal!");
-		healthbar.value -= 20;
+		
+		healthbar.value -= 10; // (float)healthbar.maxValue / nbrToucheAvantMort; 
 		if (healthbar.value <= 0) {
 			anim.SetBool ("isDead", true);
 		}

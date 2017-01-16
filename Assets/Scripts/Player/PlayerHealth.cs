@@ -47,9 +47,10 @@ public class PlayerHealth : MonoBehaviour {
 		if (stressMode) {
 			// Remplie la barre de stress
 			currentHealth += stressAmount*Time.deltaTime;
-			healthSlider.value = currentHealth;
-			fillBar.color = Color.Lerp (beginningColor, gameOverColor, healthSlider.value/ healthSlider.maxValue);
 		}
+		//Life update value
+		healthSlider.value = currentHealth;
+		fillBar.color = Color.Lerp (beginningColor, gameOverColor, healthSlider.value/ healthSlider.maxValue);
 
 
 		//HUD dmg/heal
