@@ -51,7 +51,7 @@ public class BossMove : MonoBehaviour {
 		
 		Vector3 direction = player.position - this.transform.position;
 		//float angle = Vector3.Angle (direction, this.transform.forward);
-		if (Vector3.Distance (player.position, this.transform.position) < 15 && (anim.GetBool("isIdle") || anim.GetBool("isWalking")) ) {
+		if (Vector3.Distance (player.position, this.transform.position) < 20 && (anim.GetBool("isIdle") || anim.GetBool("isWalking")) ) {
 
 			direction.y = 0;
 
@@ -60,7 +60,7 @@ public class BossMove : MonoBehaviour {
 
 			anim.SetBool ("isIdle", false);
 			if (direction.magnitude > 8) {
-				this.transform.Translate (0, 0, 0.2f);
+				this.transform.Translate (0, 0, 0.5f);
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isAttacking", false);
 			} else {
