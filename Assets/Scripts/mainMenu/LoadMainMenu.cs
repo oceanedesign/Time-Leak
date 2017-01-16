@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 public class LoadMainMenu : MonoBehaviour {
 
 	public void LoadSceneMenu(){
-		SceneManager.LoadScene ("main-menu");
+		SceneManager.LoadScene ("main-menu"); //passage au menu principal
 	} 
 }

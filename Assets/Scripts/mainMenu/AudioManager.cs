@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour {
 
 
 	public void Onhover () {
-		source.PlayOneShot (hover);
+		source.PlayOneShot (hover); //lorsque les boutons sont surlignes par le curseur, le son s'active
 	}
 	
 

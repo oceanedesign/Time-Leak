@@ -8,13 +8,9 @@ public class SelectOnInput : MonoBehaviour {
 	public GameObject selectedObject;
 	private bool buttonSelected;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () 
+	// dans le cas où le joueur n'a pas de souris, permet de selectionner les boutons avec les fleches
 	{
 		if (Input.GetAxisRaw ("Vertical") != 0 && buttonSelected == false) 
 		{
